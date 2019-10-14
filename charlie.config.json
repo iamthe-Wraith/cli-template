@@ -1,0 +1,23 @@
+{
+  "dependencies": [
+    "@babel/polyfill",
+    "axios",
+    "chalk",
+    "fs-extra",
+    "prompts",
+    "https://github.com/iamthe-Wraith/command.git",
+    "https://github.com/iamthe-Wraith/logger.git",
+    "https://github.com/iamthe-Wraith/parser.git"
+  ],
+  "devDependencies": [
+    "@babel/core",
+    "@babel/preset-env",
+    "babel-loader",
+    "clean-webpack-plugin",
+    "ts-loader",
+    "typescript",
+    "webpack",
+    "webpack-cli",
+    "webpack-node-externals"
+  ]
+}

@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+const os = require('os');
+const fs = require('fs');
+const path = require('path');
+// const prompts = require('prompts');
+
+const configPath = path.join(os.homedir(), '.{{projectName}}rc');
+
+(async () => {
+  let config = {};
+  if (fs.existsSync(configPath)) {
+    try {
+      const parsedConfig = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+      if (typeof parsedConfig === 'object') {
+        config = parsedConfig;
+      }
+    } catch (err) { /* swallow ParserErrors */ }
+  }
+
+  /***
+   * add code here that should be added
+   * to this cli's config file...
+   ***/
+
+  if (!('colors' in config)) {
+    config.colors = {
+      title: 'cyan',
+      gen: 'white',
+      success: 'green',
+      warn: 'yellow',
+      error: 'red',
+      debug: 'gray',
+      complete: 'rainbow'
+    };
+  }
+
+  // write updated config file
+  fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+
+  process.exitCode = 0;
+})();

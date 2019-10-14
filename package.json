@@ -1,0 +1,25 @@
+{
+  "name": "charlie",
+  "version": "1.0.0",
+  "description": "my personal build tool",
+  "main": "src/index.ts",
+  "scripts": {
+    "postinstall": "node postinstall",
+    "start": "webpack --config webpack.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamthe-Wraith/charlie.git"
+  },
+  "author": "the wraith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamthe-Wraith/charlie/issues"
+  },
+  "homepage": "https://github.com/iamthe-Wraith/charlie#readme",
+  "bin": {
+    "charlie": "bin/charlie"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

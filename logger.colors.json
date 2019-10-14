@@ -1,0 +1,9 @@
+{
+  "TITLE": "cyan.bold",
+  "GEN": "white",
+  "SUCCESS": "green.bold",
+  "WARN": "yellow.bold",
+  "ERROR": "red",
+  "DEBUG": "gray",
+  "COMPLETE": "green.bold.underline"
+}
