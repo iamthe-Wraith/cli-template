@@ -8,6 +8,8 @@ const path = require('path');
 const configPath = path.join(os.homedir(), '.{{projectName}}rc');
 
 (async () => {
+  console.log('creating project config file...');
+
   let config = {};
   if (fs.existsSync(configPath)) {
     try {
@@ -23,20 +25,24 @@ const configPath = path.join(os.homedir(), '.{{projectName}}rc');
    * to this cli's config file...
    ***/
 
-  if (!('colors' in config)) {
-    config.colors = {
-      title: 'cyan',
-      gen: 'white',
-      success: 'green',
-      warn: 'yellow',
-      error: 'red',
-      debug: 'gray',
-      complete: 'rainbow'
-    };
+  /*
+  if (!('temp' in config)) {
+    config.temp = 'this is just for reference...you should replace this.';
   }
+  */
 
-  // write updated config file
-  fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+  if (Object.keys(config).length) {
+    try {
+      fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
 
-  process.exitCode = 0;
+      console.log(`[+] ${configPath} created successfully`);
+
+      process.exit(0);
+    } catch (err) {
+      console.error(`postinstall error\n\n${err.message}`);
+      process.exit(1);
+    }
+  } else {
+    console.log('config file creation cancelled. no config options specified');
+  }
 })();
