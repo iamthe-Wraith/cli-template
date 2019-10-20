@@ -36,10 +36,13 @@ module.exports = {
   resolve: {
     extensions: ['*', '.ts', '.tsx', 'js'],
     alias: {
+      apis: resolve(__dirname, 'src', 'apis'),
+      commands: resolve(__dirname, 'src', 'commands'),
+      lib: resolve(__dirname, 'src', 'lib'),
       root: resolve(__dirname),
-      lib: resolve(__dirname, 'lib'),
       src: resolve(__dirname, 'src'),
-      commands: resolve(__dirname, 'src', 'commands')
+      types: resolve(__dirname, 'src', 'types'),
+      utils: resolve(__dirname, 'src', 'utils')
     }
   }
 };
