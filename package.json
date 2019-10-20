@@ -1,7 +1,7 @@
 {
-  "name": "charlie",
+  "name": "{{projectName}}",
   "version": "1.0.0",
-  "description": "my personal build tool",
+  "description": "",
   "main": "src/index.ts",
   "scripts": {
     "postinstall": "node postinstall",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamthe-Wraith/charlie.git"
+    "url": "git+https://github.com/{{author}}/{{projectName}}.git"
   },
-  "author": "the wraith",
-  "license": "ISC",
+  "author": "{{author}}",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamthe-Wraith/charlie/issues"
+    "url": "https://github.com/{{author}}/{{projectName}}/issues"
   },
-  "homepage": "https://github.com/iamthe-Wraith/charlie#readme",
+  "homepage": "https://github.com/{{author}}/{{projectName}}#readme",
   "bin": {
-    "charlie": "bin/charlie"
+    "{{projectName}}": "bin/{{projectName}}"
   },
   "dependencies": {},
   "devDependencies": {}
