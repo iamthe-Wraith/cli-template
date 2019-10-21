@@ -25,24 +25,18 @@ const configPath = path.join(os.homedir(), '.{{projectName}}rc');
    * to this cli's config file...
    ***/
 
-  /*
-  if (!('temp' in config)) {
+  if (Object.keys(config).length === 0) {
     config.temp = 'this is just for reference...you should replace this.';
   }
-  */
 
-  if (Object.keys(config).length) {
-    try {
-      fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+  try {
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
 
-      console.log(`[+] ${configPath} created successfully`);
+    console.log(`[+] ${configPath} created successfully`);
 
-      process.exit(0);
-    } catch (err) {
-      console.error(`postinstall error\n\n${err.message}`);
-      process.exit(1);
-    }
-  } else {
-    console.log('config file creation cancelled. no config options specified');
+    process.exit(0);
+  } catch (err) {
+    console.error(`postinstall error\n\n${err.message}`);
+    process.exit(1);
   }
 })();
