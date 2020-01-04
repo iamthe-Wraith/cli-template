@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "postinstall": "node postinstall",
-    "start": "webpack --config webpack.config.js --watch"
+    "start": "webpack --config webpack.config.js --watch",
+    "test": "mocha -r ts-node/register test/**/*.ts --watch --watch-extensions ts,tsx"
   },
   "repository": {
     "type": "git",
