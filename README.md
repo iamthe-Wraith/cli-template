@@ -2,7 +2,8 @@
 
 ### Run
 
-`npm start` - to start webpack watchers and the bundling process
+`npm start` - to start webpack watchers and the bundling process  
+`npm run test` - to start up unit tests  
 
 ### Directory structure
 
