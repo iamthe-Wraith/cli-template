@@ -1,5 +1,12 @@
 # {{projectName}}
 
+### Install Instructions
+
+- after project is created, run `npm i`
+- run `npm start` (this has to be done before `npm i -g` because it creates /bin)
+- run `npm i -g`
+- cli is now available
+
 ### Run
 
 `npm start` - to start webpack watchers and the bundling process  
