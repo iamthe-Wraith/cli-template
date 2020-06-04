@@ -5,9 +5,9 @@
     "chalk",
     "fs-extra",
     "prompts",
-    "https://github.com/iamthe-Wraith/command.git",
-    "https://github.com/iamthe-Wraith/logger.git",
-    "https://github.com/iamthe-Wraith/parser.git"
+    "iamthe-Wraith/command",
+    "iamthe-Wraith/logger",
+    "iamthe-Wraith/parser"
   ],
   "devDependencies": [
     "@babel/core",
