@@ -3,8 +3,11 @@ import commands from './commands';
 const Parser = require('parser');
 const logger = require('logger');
 
-let ctx = { ...Parser.init(...process.argv) };
-ctx.config = getConfig();
+const [node, ns, command, ...args] = process.argv;
+let ctx = {
+  ...Parser.init(node, ns, command, args),
+  config: getConfig()
+};
 
 if (ctx.command === null) {
   logger.error(`\n[-] no command entered\n`);
