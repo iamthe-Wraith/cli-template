@@ -1,7 +1,7 @@
 import os from 'os';
 import fs from 'fs';
 import path from 'path';
-import { ConfigInterface } from 'src/types/config';
+import { ConfigInterface } from '../types';
 
 const configUrl:string = path.join(os.homedir(), '.{{projectName}}rc');
 

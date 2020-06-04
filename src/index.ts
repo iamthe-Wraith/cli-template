@@ -1,5 +1,5 @@
-import { getConfig } from 'utils/config';
-import commands from 'commands';
+import { getConfig } from './utils/config';
+import commands from './commands';
 const Parser = require('parser');
 const logger = require('logger');
 

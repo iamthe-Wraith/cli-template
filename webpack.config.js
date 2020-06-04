@@ -34,15 +34,6 @@ module.exports = {
     new CleanWebpackPlugin()
   ],
   resolve: {
-    extensions: ['*', '.ts', '.tsx', 'js'],
-    alias: {
-      apis: resolve(__dirname, 'src', 'apis'),
-      commands: resolve(__dirname, 'src', 'commands'),
-      lib: resolve(__dirname, 'src', 'lib'),
-      root: resolve(__dirname),
-      src: resolve(__dirname, 'src'),
-      types: resolve(__dirname, 'src', 'types'),
-      utils: resolve(__dirname, 'src', 'utils')
-    }
+    extensions: ['*', '.ts', '.tsx', 'js']
   }
 };
