@@ -4,7 +4,7 @@ const Parser = require('parser');
 const logger = require('logger');
 
 const [node, ns, command, ...args] = process.argv;
-let ctx = {
+const ctx = {
   ...Parser.init(node, ns, command, args),
   config: getConfig()
 };
@@ -17,7 +17,7 @@ if (ctx.command === null) {
   process.exit(1);
 }
 
-require(`commands/${ctx.command}`).exec(ctx)
+require(`./commands/${ctx.command}`).exec(ctx)
   .then((ctx:any):void => {
     /* perform any universal completion processing here */
   })
