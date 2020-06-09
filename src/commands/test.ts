@@ -1,13 +1,13 @@
 import { IContext } from '../types';
-const logger = require('logger');
+import Logger from 'logger';
 
 export const exec = (ctx: IContext):Promise<IContext> => {
   return new Promise((resolve, reject) => {
-    logger.debug('inside test command');
+    Logger.debug('inside test command');
     resolve(ctx);
   });
 };
 
 export const help = () => {
-  logger.debug('getting help docs...');
+  Logger.debug('getting help docs...');
 };
