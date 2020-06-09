@@ -1,10 +1,11 @@
 import { getConfig } from './utils/config';
 import commands from './commands';
+import { IContext } from './types';
 const Parser = require('parser');
 const logger = require('logger');
 
 const [node, ns, command, ...args] = process.argv;
-const ctx = {
+const ctx = <IContext>{
   ...Parser.init(node, ns, command, args),
   config: getConfig()
 };
@@ -18,7 +19,7 @@ if (ctx.command === null) {
 }
 
 require(`./commands/${ctx.command}`).exec(ctx)
-  .then((ctx:any):void => {
+  .then((ctx: IContext):void => {
     /* perform any universal completion processing here */
   })
   .catch((err:Error):void => logger.error(`\n${err.message}\n`));

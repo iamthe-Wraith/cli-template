@@ -1,19 +1,19 @@
 import os from 'os';
 import fs from 'fs';
 import path from 'path';
-import { ConfigInterface } from '../types';
+import { IConfig } from '../types';
 
-const configUrl:string = path.join(os.homedir(), '.{{projectName}}rc');
+const configUrl: string = path.join(os.homedir(), '.{{projectName}}rc');
 
 /***
  * retrieves the user's .{{projectName}}rc file's contents,
  * parses it into JSON format, and then returns it.
  *
- * @return {ConfigInterface} - the entire config object
+ * @return {IConfig} - the entire config object
  ***/
-export const getConfig = ():ConfigInterface => {
+export const getConfig = (): IConfig => {
   try {
-    const config:ConfigInterface = JSON.parse(fs.readFileSync(configUrl, 'utf8'));
+    const config = <IConfig>JSON.parse(fs.readFileSync(configUrl, 'utf8'));
 
     return config;
   } catch (err) {

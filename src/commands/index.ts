@@ -1,4 +1,4 @@
-const commands:Set<string> = new Set([
+const commands: Set<string> = new Set([
   'test'
 ]);
 
