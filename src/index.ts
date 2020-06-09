@@ -1,7 +1,7 @@
 import { getConfig } from './utils/config';
 import commands from './commands';
 import { IContext } from './types';
-const Parser = require('parser');
+import Parser from 'parser';
 const logger = require('logger');
 
 const [node, ns, command, ...args] = process.argv;
