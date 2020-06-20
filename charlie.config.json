@@ -5,7 +5,7 @@
     "prompts",
     "iamthe-Wraith/command",
     "iamthe-Wraith/logger",
-    "iamthe-Wraith/parser"
+    "iamthe-Wraith/cmd-line-parser"
   ],
   "devDependencies": [
     "@babel/core",
