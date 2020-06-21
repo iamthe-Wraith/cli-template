@@ -2,9 +2,9 @@ import { getConfig } from './utils/config';
 import commands from './commands';
 import { IContext } from './types';
 import Parser from 'parser';
-import Logger from 'logger';
+import { Logger } from 'logger';
 
-const logger = new Logger({});
+Logger.init({});
 const [node, ns, command, ...args] = process.argv;
 const ctx = <IContext>{
   ...Parser.init(node, ns, command, args),
@@ -12,10 +12,10 @@ const ctx = <IContext>{
 };
 
 if (ctx.command === null) {
-  logger.error(`\n[-] no command entered\n`);
+  Logger.error(`\n[-] no command entered\n`);
   process.exit(1);
 } else if (!commands.has(ctx.command)) {
-  logger.error(`\n[-] invalid command\n`);
+  Logger.error(`\n[-] invalid command\n`);
   process.exit(1);
 }
 
@@ -23,4 +23,4 @@ require(`./commands/${ctx.command}`).exec(ctx)
   .then((ctx: IContext):void => {
     /* perform any universal completion processing here */
   })
-  .catch((err:Error):void => logger.error(`\n${err.message}\n`));
+  .catch((err:Error):void => Logger.error(`\n${err.message}\n`));
