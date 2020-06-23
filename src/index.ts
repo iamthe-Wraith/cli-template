@@ -1,8 +1,8 @@
 import { getConfig } from './utils/config';
-import commands from './commands';
+import commands from '@iamthe-wraith/commands';
 import { IContext } from './types';
-import Parser from 'parser';
-import { Logger } from 'logger';
+import Parser from '@iamthe-wraith/cmd-line-parser';
+import { Logger } from '@iamthe-wraith/logger';
 
 Logger.init({});
 const [node, ns, command, ...args] = process.argv;

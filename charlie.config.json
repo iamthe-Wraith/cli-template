@@ -3,9 +3,9 @@
     "@babel/polyfill",
     "fs-extra",
     "prompts",
-    "iamthe-Wraith/command",
-    "iamthe-Wraith/logger",
-    "iamthe-Wraith/cmd-line-parser"
+    "@iamthe-wraith/command",
+    "@iamthe-wraith/logger",
+    "@iamthe-wraith/cmd-line-parser"
   ],
   "devDependencies": [
     "@babel/core",
