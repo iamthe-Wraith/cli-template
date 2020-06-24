@@ -19,7 +19,6 @@
     "@typescript-eslint/parser",
     "babel-loader",
     "chai",
-    "clean-webpack-plugin",
     "eslint",
     "eslint-config-standard",
     "eslint-plugin-import",

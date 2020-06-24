@@ -1,7 +1,6 @@
 const { resolve } = require('path');
 const { BannerPlugin } = require('webpack');
 const nodeExternals = require('webpack-node-externals');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'none',
@@ -30,8 +29,7 @@ module.exports = {
     new BannerPlugin({
       banner: '#!/usr/bin/env node\n',
       raw: true
-    }),
-    new CleanWebpackPlugin()
+    })
   ],
   resolve: {
     extensions: ['*', '.ts', '.tsx', 'js']
