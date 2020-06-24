@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "postinstall": "node postinstall",
+    "postinstall": "node ./bin/postinstall",
     "start": "webpack --config webpack.config.js --watch",
     "test": "mocha -r ts-node/register test/**/*.ts --watch --watch-extensions ts,tsx"
   },
