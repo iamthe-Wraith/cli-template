@@ -1,5 +1,5 @@
 import { getConfig } from './utils/config';
-import commands from '@iamthe-wraith/commands';
+import commands from './commands';
 import { IContext } from './types';
 import Parser from '@iamthe-wraith/cmd-line-parser';
 import { Logger } from '@iamthe-wraith/logger';
